@@ -25,8 +25,8 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'dist/add2vals'
-                }
+            archiveArtifacts artifacts: 'dist/add2vals.exe', fingerprint: true
+        }
             }
         }
     }
