@@ -27,6 +27,9 @@ pipeline {
                 success {
             archiveArtifacts artifacts: 'dist/add2vals.exe', fingerprint: true
         }
+                 always {
+            junit 'test-reports/results.xml'
+        }
             }
         }
     }
